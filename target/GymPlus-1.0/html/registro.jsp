@@ -17,6 +17,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Registro | GymPlus</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
+        
         <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -98,18 +99,22 @@
 
                     <div class="form-group">    
                         <label for="telefono" class="form-label">Telefono movil: *</label>
-                        <input type="tel" name="telefono" id="telefono" placeholder="Digite su telÃ©fono" required class="form-control"> <br>
+                        <input type="tel" name="telefono" id="telefono" placeholder="Digite su telefono" required class="form-control"> <br>
                     </div> 
                     <div class="form-group">    
                         <label for="email" class="form-label">Correo electronico: *</label>
                         <input type="email" name="email" id="email" placeholder="Digite su email" required class="form-control"> <br>
                     </div> 
                     <div class="form-group">    
-                        <label for="contraseÃ±a" class="form-label">Contrasena: *</label>
-                        <input type="password" name="pass" id="pass" placeholder="Digite su password" required class="form-control"> <br>
+                        <label for="contraseña" class="form-label">Contraseña: *</label>
+                        <input type="password" name="pass" id="pass" placeholder="Digite nueva contraseña" required class="form-control"> <br>
                     </div>    
+                    <div class="form-group">    
+                        <label for="contraseña2" class="form-label">Confirmar contraseña: *</label>
+                        <input type="password" name="pass2" id="pass2" placeholder="Confirmación de contraseña" required class="form-control"> <br>
+                    </div>  
                     <div class="form-group">
-                        <input type="submit" name="iniciar" value="Registrarme" class="btn btn-success"> 
+                        <input type="submit" name="registrar" value="Registrarme" class="btn btn-success"> 
                         <input type="reset" value="Limpiar" class="btn btn-danger"> 
                     </div>
 
@@ -122,7 +127,7 @@
         <div class="col-1"></div>
         </div> <br><br>
         
-        <% if(request.getParameter("iniciar") != null){
+        <% if(request.getParameter("registrar") != null){
 
                 String nombre = request.getParameter("nombre");
                 String apellido = request.getParameter("apellido");

@@ -100,16 +100,27 @@
     </div><hr><br>
 
     <h1>PLANES DE GYMPLUS</h1>
+    
+    
     <%
-        if(usuario.getId_plan() != null){
+        if(usuario.getNombre() != null){
     %>
-        <p><%= usuario.getNombre() %> cuentas con el plan <%= usuario.getId_plan()%></p> <br>
+        <%
+            if(usuario.getId_plan() != null){
+        %>
+            <p><%= usuario.getNombre() %> cuentas con el plan <%= usuario.getId_plan()%></p> <br>
+        <%
+            }
+            else {
+        %>
+                <p><%= usuario.getNombre() %> usted aun no cuenta con un plan, a continuacion te enseñaremos los diferentes planes que ofrece Health and Body</p> <br>
+        <%
+            }
+        %>
     <%
-        }
-        else{
+        } else{
     %>
-        
-        <p><%= usuario.getNombre() %> usted aun no cuenta con un plan, a continuacion te enseñaremos los diferentes planes que ofrece GymPlus</p> <br>
+            <p> A continuacion te enseñaremos los diferentes planes que ofrece Health and Body</p>
     <%
         }
     %>

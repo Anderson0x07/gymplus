@@ -34,7 +34,7 @@
         msg = facade.eliminarUsuario(usu);
     }
     
-    if(request.getParameter("documento") != null){ // BOTON EDITAR
+    if(request.getParameter("editar") != null){ // BOTON EDITAR
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String fechaNacimiento = request.getParameter("date");
@@ -111,7 +111,7 @@
                                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <img src="../img/otro.png" class="img-fluid rounded-circle avatar mr-2"
-                                             alt="https://generated.photos/" />
+                                             alt="logo" />
                                         <%= admin.getNombre() %>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

@@ -153,19 +153,20 @@
             <div class="col-1"></div>
         </div>
 
-        <br><br>
-        <h2>¿QUIENES SOMOS?</h2>
-        <p>
+        <div>
+            <h2>¿QUIENES SOMOS?</h2>
+            
+            <p>
             Somos una página que surge con el propósito de brindar no
             solo un mejor estado de salud y bienestar corporal, sino de
             motivación, excelencia y mejora continua. Somos un gimnasio 
             que llegó a revolucionar la experiencia de entrenar en la ciudad de Cúcuta.
-        </p>
-        <br><br>
+            </p>
+        </div>
+        
 
         <div class="row">
-            <div class="col-1"></div>
-            <div class="col-3"  align="center"> 
+            <div class="col-4"  align="center"> 
                 <div class="card" style="width: 20rem;">
                     <img src="img/periodico.png" class="card-img-top" alt="IMAGEN PERIODICO" width="150px">
                     <div class="card-body">
@@ -188,7 +189,7 @@
                     <a id="boton" href="html/productos.jsp">Ver Productos</a>
                 </div>
             </div>
-            <div class="col-3" align="center">
+            <div class="col-4" align="center">
                 <div class="card" style="width: 20rem;">
                     <img src="img/mancuerna2.png" class="card-img-top" alt="..." width="150px">
                     <div class="card-body">
@@ -199,7 +200,6 @@
                     <a id="boton" href="html/planes.jsp">Ver Planes</a>
                 </div>
             </div>
-            <div class="col-1"></div>
         </div>
 
         <br><br>

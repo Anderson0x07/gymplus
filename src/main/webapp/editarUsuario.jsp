@@ -33,7 +33,7 @@
     us.setNumeroDoc(numDoc);
     
     Usuario usu = new Usuario();
-    usu = facade.buscarUsuarioDoc(us); //nuevo usuario con todos los datos del que busco por numDoc
+    usu = facade.buscarUsuarioDoc(us); //nuevo usuario con todos los datos del que se buscó por numDoc
     
     ArrayList<Plan> planes = facadeP1.buscarPlanes();
 %>
@@ -296,12 +296,12 @@
                                         <div class="form-group">
                                             <input type="submit" value="Guardar Usuario" class="btn btn-success">
                                             <input type="button" value="Cancelar" 
-                                                   onclick="location.href='dashboard/dash-usuarios.jsp'"
+                                                   name="editar"
                                                    class="btn btn-success">                       
                                         </div>
                                     </form>
                                     <%
-                                        } else {
+                                        } else {  //onclick="location.href='dashboard/dash-usuarios.jsp?documento=<%= usu.getNumeroDoc()% >'"  va aarriba otra opcion
                                     %>
 
                                         <div id="divMensaje" class="alert alert-danger">

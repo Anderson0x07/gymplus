@@ -82,7 +82,7 @@
                     <button type="submit" name= "iniciar" class="btn btn-primary"> <i class="fas fa-sign-in-alt"></i>  Ingresar </button>
                 </form>
                 <div class="col-12">
-                    <input type="button" value="Cancelar" name="cancelar" onclick="location.href='../index.html'" class="btn btn-danger">
+                    <input type="button" value="Cancelar" name="cancelar" onclick="location.href='../index.jsp'" class="btn btn-danger">
                 </div>
                 <br>
                 
@@ -112,13 +112,13 @@
                             }
                         } else{
                         %>
-                            <div class="alert alert-success">
-                                ERROR AL INICIAR SESION
+                            <div class="alert alert-danger">
+                                Error al inicar sesión, intente nuevamente
                             </div>
                         <%  
                         }
                         %>
-                %> 
+                
                 
                 <%
                     } 

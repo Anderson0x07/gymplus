@@ -14,18 +14,18 @@ import java.sql.SQLException;
  * @author Jorge Orlando Vera
  */
 public class Conexion {
-//    private String USERNAME = "root";
-//    private String PASSWORD = "";
-//    private String HOST = "localhost";
-//    private String PORT = "3306";  
-//    private String DATABASE = "loginjsp";
-//    private String CLASSNAME = "com.mysql.jdbc.Driver";
-    private String USERNAME = "pppilvykg2u56phj";
-    private String PASSWORD = "swrg9jybyefjd4j3";
-    private String HOST = "cis9cbtgerlk68wl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+    private String USERNAME = "root";
+    private String PASSWORD = "";
+    private String HOST = "localhost";
     private String PORT = "3306";  
-    private String DATABASE = "esk23pr1qu31cais";
+    private String DATABASE = "gymbd";
     private String CLASSNAME = "com.mysql.jdbc.Driver";
+//    private String USERNAME = "pppilvykg2u56phj";
+//    private String PASSWORD = "swrg9jybyefjd4j3";
+//    private String HOST = "cis9cbtgerlk68wl.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+//    private String PORT = "3306";  
+//    private String DATABASE = "esk23pr1qu31cais";
+//    private String CLASSNAME = "com.mysql.jdbc.Driver";
     private String URL = "jdbc:mysql://"+HOST+":"+PORT+"/"+DATABASE;
     private Connection con;
     
