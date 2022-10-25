@@ -33,8 +33,6 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         
         
-        
-        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
@@ -43,74 +41,14 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
         <script src="https://kit.fontawesome.com/1193c03dcb.js" crossorigin="anonymous"></script>
-        
+        <script src="js/cargar_menu.js"></script>
     </head>
     
     <body id="body-index">
         <!--barra navegacion-->
-        <div class="row" style="margin-bottom: 10px">
-            <div class="col-1" ></div>
-            <div class="col-10">
-
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                    
-                        <a class="navbar-brand" href="index.jsp">
-                            <i style="font-weight: bold ">Body Health</i>
-                        </a>
-                      
-                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav mr-auto">
-                            <li><a class="nav-link"  href="index.jsp"><i class="fa-sharp fa-solid fa-house"></i> Home</a></li>
-                            <li><a class="nav-link" href="html/planes.jsp"><i class="fa-sharp fa-solid fa-tag"></i> Planes</a></li>
-                            <li><a class="nav-link" href="html/noticias.html"><i class="fa-solid fa-newspaper"></i> Noticias</a></li>
-                            <li><a class="nav-link" href="html/productos.jsp"><i class="fa-sharp fa-solid fa-shop"></i> Productos</a></li>
-                            
-                        </ul>
-                        
-                      </div>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="justify-content:flex-end;">
-                            
-                        <% 
-                            if(sesion.getAttribute("user") == null){ 
-                        %>
-                           
-                            <div>
-                                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                                    <li class="nav-item dropdown">
-                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                          <img src="img/otro.png" class="img-fluid" width="50" height="50" />
-                                          <%= usuario.getNombre() %>
-                                      </a>
-                                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="mi-perfil.jsp"><i class="fa-solid fa-circle-user"></i> Mi Perfil</a></li>
-                                        <li><a class="dropdown-item" href="html/carrito.jsp"><i class="fa-sharp fa-solid fa-cart-shopping"></i> Carrito</a></li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a class="dropdown-item" href="html/login.jsp?cerrar=true"><i class="fa-solid fa-circle-info fa-beat-fade" style="--fa-beat-fade-opacity: 0.67; --fa-beat-fade-scale: 1.075;" ></i> Cerrar Sesion</a></li>
-                                      </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        <% 
-                            } else{ 
-                        %>
-                            <div>
-                                <a id="boton" class="nav-item" href="html/login.jsp" style="text-align: center">Login</a>
-                            </div>
-                        <% 
-                            } 
-                        %> 
-                        
-                        </div>&nbsp
-                </nav>
-
-            </div>
-            <div class="col-1"></div>
-        </div> 
+        <div id="navbar">
+             <script>insert_menu();</script>
+        </div>
                     
         
         <!--CARRUSEL-->

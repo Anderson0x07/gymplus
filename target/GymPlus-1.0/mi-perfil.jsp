@@ -25,87 +25,26 @@
         <title>Mi Perfil</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <script src='js/main.js'></script>
+        
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <script src="https://kit.fontawesome.com/1193c03dcb.js" crossorigin="anonymous"></script>
+        <script src="js/cargar_menu.js"></script>
     </head>
     <body id="body-index">
         
-        
         <!--barra navegacion-->
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="col-10">
-
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="index.jsp">
-                            <img src="img/gym-plus.png" alt="Gym Plus">
-                        </a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <a class="nav-link"  href="index.jsp">Inicio</a>
-                            <a class="nav-link" href="html/planes.jsp">Planes</a>
-                            <a class="nav-link" href="html/noticias.html">Noticias</a>
-                            <a class="nav-link" href="html/productos.jsp">Productos</a>
-                        </ul>
-
-                      </div>
-                        
-                        <% 
-                            if(sesion.getAttribute("user") != null){ 
-                        %>
-                        
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                            <div class="container">
-
-                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                              </button>
-
-                              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                                <a id="boton" href="html/carrito.jsp">
-                                    <img src="img/carrito.png" alt="carrito" width="35px" >
-                                </a> &nbsp &nbsp 
-                                    
-                                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                                    <li class="nav-item dropdown">
-                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                          <img src="img/otro.png" width="50" height="50" />
-                                          <%= usuario.getNombre() %>
-                                      </a>
-                                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="mi-perfil.jsp">Mi Perfil</a></li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a class="dropdown-item" href="html/login.jsp?cerrar=true">Cerrar Sesion</a></li>
-                                      </ul>
-                                    </li>
-                                </ul>
-                              </div>
-                                      
-                            </div>
-                        </nav>
-                        <% 
-                            } else {
-                        %>
-                                <a id="boton"  href="html/login.jsp">Log in</a> &nbsp &nbsp 
-                                <a id="boton" href="html/registro.jsp">Sign in</a> &nbsp &nbsp 
-                        <% 
-                            } 
-                        %>
-                    </div>
-                </nav>
-
-            </div>
-            <div class="col-1"></div>
+        <div id="navbar">
+             <script>insert_menu();</script>
         </div>
 
 
