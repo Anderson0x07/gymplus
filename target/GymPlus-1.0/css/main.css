@@ -1,6 +1,5 @@
 /*ESTILO DE TODO EL BODY*/
 #body-index{
-    text-align: center;
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
@@ -45,7 +44,7 @@
 #boton:link, #boton:visited{
     background-color: rgb(55, 61, 61);
     color: white;
-    padding: 15px 25px;
+    padding: 5px 30px;
     text-decoration: none;
 }
 #boton:hover, #boton:active{
