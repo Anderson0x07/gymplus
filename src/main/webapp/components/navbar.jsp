@@ -1,4 +1,3 @@
-
 <%@page import="DTO.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true"%>
@@ -11,7 +10,11 @@
         usuario = (Usuario) sesion.getAttribute("user");
 
     }
+    /* else{
+        out.print("<script>location.replace('html/login.jsp');</script>");
+    }*/
 %>
+
 <html>
     <div id="navbar" class="row" style="margin-bottom: 10px">
             <div class="col-1" ></div>

@@ -57,26 +57,10 @@
     color: white;
     background-color: #212529;
     text-align: center;
-    font-size: medium;
+    font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*NAVEGACION FOOTER
-#nav-footer li{
-    float: left;
-}
-#nav-footer li a{
-    display: block;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    padding: 15px 90px;
-    text-decoration: none;
-}
-#nav-footer li a:hover{
-    color: rgb(245, 0, 0);
-    background-color: rgb(220, 220, 226);
-    font-weight: bold;
-}*/
 
 #nav-footer{
     font-size: x-large;

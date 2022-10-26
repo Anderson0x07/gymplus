@@ -8,11 +8,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true"%>
 
-<% 
+<%
     HttpSession sesion = request.getSession();
     Usuario usuario = new Usuario();
 
-    if(sesion.getAttribute("user") != null){
+    if (sesion.getAttribute("user") != null) {
         usuario = (Usuario) sesion.getAttribute("user");
 
     }
@@ -28,29 +28,33 @@
         <title>Inicio | GymPlus</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
-        
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        
-        
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
-        
+
+
+
         <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        
+
         <script src="https://kit.fontawesome.com/1193c03dcb.js" crossorigin="anonymous"></script>
-        <script src="js/cargar_menu.js"></script>
+
     </head>
-    
+
     <body id="body-index">
+
         <!--barra navegacion-->
         <div id="navbar">
-             <script>insert_menu();</script>
+            <script> $("#navbar").load("components/navbar.jsp");</script>
         </div>
-                    
-        
+
+
+
         <!--CARRUSEL-->
         <div class="row">
             <div class="col-1"></div>
@@ -59,11 +63,11 @@
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
+                                aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+                                aria-label="Slide 3"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -77,12 +81,12 @@
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
+                            data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
+                            data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -92,10 +96,10 @@
             <div class="col-1"></div>
         </div> 
 
-        
-        
+
+
         <div class="container" style="margin-top: 20px ; margin-bottom: 30px">
-            
+
             <div>
                 <h2>¿QUIENES SOMOS?</h2>
                 <p>
@@ -105,90 +109,100 @@
                     que llegó a revolucionar la experiencia de entrenar en la ciudad de Cúcuta.
                 </p>
             </div> 
-            
+
             <div class="row">
-                
-                <div class="col">
+
+                <div class="col-sm-4">
                     <div class="card" >
-                        <div class="card-title">
-                            <img src="img/periodico.png" width="150" height="150">
-                        </div>
-                        
                         <div class="card-body">
-                            <h2>NOTICIAS</h2>
+                            <div class="card-title">
+                                <img src="img/periodico.png" width="150" height="150">
+                                <h2 style="font-weight: bold">NOTICIAS</h2>
+                            </div>
+
+                            <p class="card-text">Encuentra noticias y artículos de interés para que mejores tu salud física y mental.</p>
+
+                            <div class="d-grid gap-2">
+                                <a class="btn btn-dark" href="html/noticias.html">Ver Noticias</a>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p>Encuentra noticias y artículos de interés para que mejores tu salud física y mental.</p>
-                        </div>
-                        
-                        <a id="boton" href="html/noticias.html">Ver Noticias</a>
-                        
+
+
+
                     </div>
                 </div>
-                
-                <div class="col">
+
+                <div class="col-sm-4">
                     <div class="card"">
-                        <div class="card-title">
-                            <img src="img/mancuerna.png" width="150" height="150">
-                        </div>
                         <div class="card-body">
-                            <h2>PRODUCTOS</h2>
+                            <div class="card-title">
+                                <img src="img/mancuerna.png" width="150" height="150">
+                                <h2>PRODUCTOS</h2>
+                            </div>
+
+
+                            <p class="card-text">Gran variedad de productos que te sirven para aumentar musculatura, perder peso o mejorar la resistencia.</p>
+
+                            <div class="d-grid gap-2">
+                                <a class="btn btn-dark" href="html/productos.jsp">Ver Productos</a>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <p>Gran variedad de productos que te sirven para aumentar musculatura, perder peso o mejorar la resistencia.</p>
-                        </div>
-                        <a id="boton" href="html/productos.jsp">Ver Productos</a>
+
                     </div>
                 </div>
-                
-                <div class="col">
+
+                <div class="col-sm-4">
                     <div class="card">
-                        <div class="card-title">
-                            <img src="img/mancuerna2.png" width="150" height="150">
-                        </div>
                         <div class="card-body">
-                            <h2>PLANES</h2>
-                        </div>
-                        <div class="card-body">
-                            <p>Los mejores planes de entrenamiento.
+                            <div class="card-title">
+                                <img src="img/mancuerna2.png" width="150" height="150">
+                                <h2 >PLANES</h2>
+                            </div>
+                            <p class="card-text">Los mejores planes de entrenamiento.
                                 Únete a nuestros planes, únete a la revolucion.</p>
+
+                            <div class="d-grid gap-2">
+                                <a class="btn btn-dark"  href="html/planes.jsp">Ver Planes</a>
+                            </div>
                         </div>
-                        <a id="boton" href="html/planes.jsp">Ver Planes</a>
+
                     </div>
                 </div>
             </div>
+
         </div>
-        
+
+
 
         <!--CARRUSEL-->
-        <div class="row">
-            <div class="col-2"></div>
+        <div class="row" style="margin-bottom: 30px">
+            <div class="col-1"></div>
 
-            <div class="col-8">
+            <div class="col-10">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://www.divulgaciondinamica.es/wp-content/uploads/2020/11/personas-que-buscan-estetica.jpg" class="rounded d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://bodytech.com.co/uploads/post/03d28af749454db285945cd083f60507/234-las-manos-en-el-gym.jpg" class="rounded d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://blog.smartfit.com.mx/wp-content/uploads/2022/03/en-cuanto-tiempo-se-ven-los-resultados-del-gym-1.jpg" class="rounded d-block w-100" alt="...">
-                      </div>
+                        <div class="carousel-item active">
+                            <img src="https://www.divulgaciondinamica.es/wp-content/uploads/2020/11/personas-que-buscan-estetica.jpg" class="rounded d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://bodytech.com.co/uploads/post/03d28af749454db285945cd083f60507/234-las-manos-en-el-gym.jpg" class="rounded d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://blog.smartfit.com.mx/wp-content/uploads/2022/03/en-cuanto-tiempo-se-ven-los-resultados-del-gym-1.jpg" class="rounded d-block w-100" alt="...">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-2"></div>
+            <div class="col-1"></div>
         </div>
-        <br><br>
-        
-        
-    </body>
-    
-    <footer id="footer">
-        <br><br><hr>
 
+
+    </body>
+
+    <footer id="footer">
+
+
+        <div class="container-fluid" style="margin: 50px 0px 50px 0px"> <hr>
             <div class="row">
                 <div class="col-2"></div>
                 <div class="col-8">
@@ -207,31 +221,28 @@
                                 </ul>
                             </div>
                             <div class="collapse navbar-collapse" id="navbarNavDropdown" style="justify-content:flex-end;">
-                            <%
-                                if (sesion.getAttribute("user") == null) {
-                            %>
+                                <%
+                                    if (sesion.getAttribute("user") != null) {
+                                %>
                                 <a id="boton" href="html/carrito.jsp" class="nav-item">
                                     <img src="img/carrito.png" alt="carrito" width="35">
                                 </a>
-                            <%
-                                }
-                            %>
+                                <%
+                                    }
+                                %>
                             </div>
                         </div>
                     </nav> 
 
                 </div>
                 <div class="col-2"></div>
-            </div> <hr> <br>
-        
-        
+            </div> <hr>
+        </div>
 
-
-
-        
-            
+        <div class="container-fluid" style="padding-bottom: 50px ">
             <div class="row">
-                <div class="col">
+
+                <div class="col-6">
                     <div style="font-size: 11pt;">
                         <p>Envíanos un mensaje a Whatsapp o escríbenos un correo</p>
 
@@ -243,11 +254,10 @@
                         </a>
                     </div>
                 </div>
-                
-                <div class="col">
+                <div class="col-6">
                     <div style="font-size: 11pt;">
                         <p>Siguenos en nuestras redes sociales</p>
-                        
+
                         <a href="https://www.facebook.com/Gym-plus-106609758773964/" target="_blank" style="text-decoration: none;color: white">
                             <h2 class="fa-brands fa-facebook"></h2>
                         </a>
@@ -259,11 +269,20 @@
                         </a>
                     </div>
                 </div>
+                <div class="w-100" style="padding-bottom: 50px"></div>
+
+                <div class="col">
+                    <h6 class="card-text"> Copyright ©2022 © Gimnasio Body Health - Cucuta - Norte de Santander - Colombia</h6>
+                </div>
+
+                
             </div>
 
 
-        <br><br>
-        <h6>Copyright ©2022 © Gimnasio GymPlus - Cucuta - Norte de Santander - Colombia</h6>
-        <br><br>
+            
+
+        </div>                    
+
+
     </footer>
 </html>
